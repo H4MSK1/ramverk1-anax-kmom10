@@ -44,4 +44,15 @@ class IndexController implements ContainerInjectableInterface
             "title" => "Index",
         ]);
     }
+
+    public function aboutActionGet()
+    {
+        $page = $this->di->get("page");
+
+        $page->add("app/about");
+
+        return $page->render([
+            "title" => "About",
+        ]);
+    }
 }

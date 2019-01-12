@@ -66,6 +66,9 @@ $route = "route-" . str_replace("/", "-", $di->get("request")->getRoute());
                 <li class="nav-item active">
                     <a class="nav-link" href="<?= url('user/all') ?>">Users</a>
                 </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="<?= url('about') ?>">About</a>
+                </li>
             </ul>
 
             <ul class="navbar-nav">
