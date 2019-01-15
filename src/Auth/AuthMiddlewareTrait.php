@@ -22,12 +22,14 @@ trait AuthMiddlewareTrait
         } else if (array_key_exists('only', $options)) {
             foreach ($options['only'] as $route) {
                 if ($this->isRouteMatched($request, $route)) {
-                    return $di->get('response')->redirect('user/login')->send();
+                    $di->get('response')->redirect('user/login')->send();
+                    exit;
                 }
             }
         } else if (! $session->has('user') || is_null($session->get('user'))) {
             if (! $this->isRouteMatched($request, 'user/login')) {
-                return $di->get('response')->redirect('user/login')->send();
+                $di->get('response')->redirect('user/login')->send();
+                exit;
             }
         }
     }
