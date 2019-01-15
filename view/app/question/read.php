@@ -138,6 +138,11 @@ $questionBelongsToUser = $isAuth && $di->get('session')->get('user') === $questi
                                 <?php endif; ?>
                                 <?php if ($answer->comment->count() > 0) : ?>
                                     <?php foreach ($answer->comment as $comment) : ?>
+                                        <div class="vote-section">
+                                            <span><a href="<?= url("vote/comment/{$comment->id}/1") ?>"><i class="fa fa-chevron-up"></i></a></span>
+                                            <span class="points"><?= $comment->points ?></span>
+                                            <span><a href="<?= url("vote/comment/{$comment->id}/0") ?>"><i class="fa fa-chevron-down"></i></a></span>
+                                        </div>
                                         <?= $comment->body ?> – <a href="<?= url("user/profile/{$comment->user->id}") ?>"><?= $comment->user->username ?></a> <?= $comment->created_at->diffForHumans() ?>
                                         <hr>
                                     <?php endforeach; ?>
