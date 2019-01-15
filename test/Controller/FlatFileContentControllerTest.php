@@ -48,7 +48,7 @@ class FlatFileContentControllerTest extends TestCase
         $this->assertInstanceOf("\Anax\Response\Response", $res);
 
         $body = $res->getBody();
-        $exp = "| ramverk1</title>";
+        $exp = "| Tech Overflow</title>";
         $this->assertContains($exp, $body);
     }
 }
