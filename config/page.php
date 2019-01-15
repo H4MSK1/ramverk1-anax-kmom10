@@ -12,7 +12,7 @@ return [
         "region" => "layout",
         "template" => "app/layout",
         "data" => [
-            "baseTitle" => " | ramverk1",
+            "baseTitle" => " | Tech Overflow",
             "bodyClass" => null,
             "favicon" => "favicon.ico",
             "htmlClass" => null,
