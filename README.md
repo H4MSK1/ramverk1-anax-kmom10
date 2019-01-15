@@ -20,6 +20,7 @@ Installation
  1. Clone this repository.
  2. Run the ```sql/setup.sql``` and ```sql/ddl/ddl.sql```.
  3. Rename the ```config/database_sample.php``` to ```config/database.php``` and if needed, change the connection details.
+ 4. Run ```composer install``` and browse to your directory and enjoy.
 
 License
 ------------------
